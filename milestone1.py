@@ -4,6 +4,7 @@ player2 = ''
 kor = 0
 
 def display_board(board):
+    print('\n' *100)
     print(board[7]+'|'+board[8]+'|'+board[9])
     print('-|-|-')
     print(board[4]+'|'+board[5]+'|'+board[6])
@@ -65,6 +66,7 @@ def play_again():
         player1 = ''
         player2 = ''
         kor = 0
+        print('\n' *100)
         game()
         return kor,test_board,player1,player2
     if pa == 'No':
