@@ -17,7 +17,7 @@ def player_input():
     global player2
     global kor
     while marker != 'X' and marker != 'O':
-        marker = input('Player 1, choose X or O: ')
+        marker = input('Player 1, choose X or O: ').upper()
     player1 = marker
     if player1 == 'X':
         player2 = 'O'
@@ -61,7 +61,7 @@ def play_again():
     global player2
     global kor
     pa = input('Do you want to play again? Yes or No: ')
-    if pa == 'Yes':
+    if pa.lower() == 'yes':
         test_board = ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ']
         player1 = ''
         player2 = ''
@@ -69,7 +69,7 @@ def play_again():
         print('\n' *100)
         game()
         return kor,test_board,player1,player2
-    if pa == 'No':
+    if pa.lower() == 'no':
         exit()
     else:
         exit()
