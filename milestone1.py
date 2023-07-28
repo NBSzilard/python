@@ -79,6 +79,10 @@ def game():
     while win_check(test_board, 'X') == False and win_check(test_board, 'O') == False:
         display_board(test_board)
         position_choice(test_board)
+        if ' ' not in test_board:
+            display_board(test_board)
+            print('Draw!')
+            play_again()
     if win_check(test_board, 'X') == True or win_check(test_board, 'O') == True:
         display_board(test_board)
         if win_check(test_board, 'X') == True:
